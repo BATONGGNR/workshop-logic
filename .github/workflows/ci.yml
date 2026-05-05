@@ -35,27 +35,25 @@ jobs:
         dotnet build ${{ env.LOGIC_PROJECT }} --no-restore --configuration Release
         dotnet build ${{ env.TEST_PROJECT }} --no-restore --configuration Release
       
-    - name: Run unit tests
+    - name: Run Tests with Coverage
       run: |
         dotnet test ${{ env.TEST_PROJECT }} `
           --no-build `
           --configuration Release `
+          --collect:"XPlat Code Coverage" `
           --verbosity normal `
-          --filter "FullyQualifiedName!~FlaUi" `
-          /p:CollectCoverage=true `
-          /p:CoverletOutputFormat=opencover `
-          /p:CoverletOutput=./TestResults/coverage.opencover.xml `
-          --logger "trx;LogFileName=test-results.trx"
-          
+          --filter "FullyQualifiedName!~FlaUi"
+      
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: '**/coverage.cobertura.xml'
+        retention-days: 5
+        
     - name: Upload test results
       uses: actions/upload-artifact@v4
       if: always()
       with:
         name: test-results
         path: '**/TestResults/*.trx'
-        
-    - name: Upload coverage report
-      uses: actions/upload-artifact@v4
-      with:
-        name: coverage-report
-        path: '**/TestResults/*.xml'
