@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "WorkshopConsoleApp/1.0.0": {
+        "dependencies": {
+          "WorkshopLogic": "1.0.0"
+        },
+        "runtime": {
+          "WorkshopConsoleApp.dll": {}
+        }
+      },
+      "WorkshopLogic/1.0.0": {
+        "runtime": {
+          "WorkshopLogic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WorkshopConsoleApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WorkshopLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

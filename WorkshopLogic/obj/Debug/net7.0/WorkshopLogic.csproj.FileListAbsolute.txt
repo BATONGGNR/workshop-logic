@@ -1,0 +1,11 @@
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\bin\Debug\net7.0\WorkshopLogic.deps.json
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\bin\Debug\net7.0\WorkshopLogic.dll
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\bin\Debug\net7.0\WorkshopLogic.pdb
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.AssemblyInfoInputs.cache
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.AssemblyInfo.cs
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.csproj.CoreCompileInputs.cache
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.dll
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\refint\WorkshopLogic.dll
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\WorkshopLogic.pdb
+C:\Users\chutk\Desktop\пестин 8 сем\Laba4_New\WorkshopLogic\obj\Debug\net7.0\ref\WorkshopLogic.dll

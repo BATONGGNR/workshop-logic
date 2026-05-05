@@ -1,0 +1,143 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopWinForms\\WorkshopWinForms.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\WorkshopLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\WorkshopLogic.csproj",
+        "projectName": "WorkshopLogic",
+        "projectPath": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\WorkshopLogic.csproj",
+        "packagesPath": "C:\\Users\\chutk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chutk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopWinForms\\WorkshopWinForms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopWinForms\\WorkshopWinForms.csproj",
+        "projectName": "WorkshopWinForms",
+        "projectPath": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopWinForms\\WorkshopWinForms.csproj",
+        "packagesPath": "C:\\Users\\chutk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopWinForms\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\chutk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0-windows7.0": {
+            "targetAlias": "net7.0-windows",
+            "projectReferences": {
+              "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\WorkshopLogic.csproj": {
+                "projectPath": "C:\\Users\\chutk\\Desktop\\пестин 8 сем\\Laba4_New\\WorkshopLogic\\WorkshopLogic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0-windows7.0": {
+          "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "Microsoft.VisualBasic": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.556, )"
+            },
+            "coverlet.msbuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
