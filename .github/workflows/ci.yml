@@ -14,7 +14,7 @@ env:
 jobs:
   build-and-test:
     name: Build and Test
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     
     steps:
     - name: Checkout code
@@ -37,14 +37,14 @@ jobs:
       
     - name: Run unit tests
       run: |
-        dotnet test ${{ env.TEST_PROJECT }} \
-          --no-build \
-          --configuration Release \
-          --verbosity normal \
-          --filter "FullyQualifiedName!~FlaUi" \
-          /p:CollectCoverage=true \
-          /p:CoverletOutputFormat=opencover \
-          /p:CoverletOutput=./TestResults/coverage.opencover.xml \
+        dotnet test ${{ env.TEST_PROJECT }} `
+          --no-build `
+          --configuration Release `
+          --verbosity normal `
+          --filter "FullyQualifiedName!~FlaUi" `
+          /p:CollectCoverage=true `
+          /p:CoverletOutputFormat=opencover `
+          /p:CoverletOutput=./TestResults/coverage.opencover.xml `
           --logger "trx;LogFileName=test-results.trx"
           
     - name: Upload test results
