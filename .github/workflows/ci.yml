@@ -8,7 +8,7 @@ on:
 
 env:
   DOTNET_VERSION: '7.0.x'
-  SOLUTION_PATH: './WorkshopLogic.sln'
+  SOLUTION_PATH: './WorkshopLogic/WorkshopLogic.sln'
   TEST_PROJECT: './WorkshopTests/WorkshopTests.csproj'
   LOGIC_PROJECT: './WorkshopLogic/WorkshopLogic.csproj'
 
