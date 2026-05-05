@@ -1,0 +1,101 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  DOTNET_VERSION: '7.0.x'
+  SOLUTION_PATH: './WorkshopLogic.sln'
+  TEST_PROJECT: './WorkshopTests/WorkshopTests.csproj'
+  LOGIC_PROJECT: './WorkshopLogic/WorkshopLogic.csproj'
+
+jobs:
+  lint-and-analyze:
+    name: Lint and Static Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.SOLUTION_PATH }}
+      
+    - name: Build project
+      run: dotnet build ${{ env.SOLUTION_PATH }} --no-restore --configuration Release
+      
+    - name: Run StyleCop analysis
+      run: dotnet build ${{ env.LOGIC_PROJECT }} /p:EnforceCodeStyleInBuild=true
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: lint-and-analyze
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.SOLUTION_PATH }}
+      
+    - name: Run unit tests with coverage
+      run: |
+        dotnet test ${{ env.TEST_PROJECT }} \
+          --configuration Release \
+          --no-restore \
+          --verbosity normal \
+          /p:CollectCoverage=true \
+          /p:CoverletOutputFormat=opencover \
+          /p:CoverletOutput=./TestResults/coverage.opencover.xml \
+          --logger "trx;LogFileName=test-results.trx"
+          
+    - name: Upload test results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-results
+        path: '**/TestResults/*.trx'
+        
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: '**/TestResults/coverage.opencover.xml'
+
+  report:
+    name: Coverage Report
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download coverage report
+      uses: actions/download-artifact@v4
+      with:
+        name: coverage-report
+        path: ./coverage
+        
+    - name: Check coverage threshold
+      run: |
+        if [ -f "./coverage/coverage.opencover.xml" ]; then
+          echo "Coverage report generated successfully"
+        else
+          echo "Coverage report not found"
+          exit 1
+        fi
